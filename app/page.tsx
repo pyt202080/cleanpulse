@@ -122,6 +122,12 @@ export default function HomePage() {
             >
               예약 조회
             </Link>
+            <Link
+              href="/login"
+              className="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors hidden sm:block"
+            >
+              직원 로그인
+            </Link>
             <Link href="/booking">
               <Button size="sm">예약하기</Button>
             </Link>
@@ -169,11 +175,6 @@ export default function HomePage() {
               <Link href="/lookup" className="w-full sm:w-auto">
                 <Button size="lg" variant="outline" icon={<Phone size={18} />} className="w-full justify-center">
                   예약 조회
-                </Button>
-              </Link>
-              <Link href="/login" className="w-full sm:w-auto mt-2 sm:mt-0">
-                <Button size="lg" variant="outline" className="w-full justify-center bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100">
-                  직원/관리자
                 </Button>
               </Link>
             </div>
