@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, forwardRef } from "react";
 import { Loader2 } from "lucide-react";
 
 type Variant = "primary" | "secondary" | "outline" | "ghost" | "danger";
-type Size = "sm" | "md" | "lg" | "xl";
+type Size = "xs" | "sm" | "md" | "lg" | "xl";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
@@ -28,6 +28,7 @@ const variantStyles: Record<Variant, string> = {
 };
 
 const sizeStyles: Record<Size, string> = {
+  xs: "px-2 py-1 text-[10px] rounded-md gap-1",
   sm: "px-3 py-1.5 text-xs rounded-lg gap-1.5",
   md: "px-4 py-2.5 text-sm rounded-xl gap-2",
   lg: "px-6 py-3 text-base rounded-xl gap-2",
@@ -66,7 +67,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading ? (
-          <Loader2 className="animate-spin" size={size === "sm" ? 14 : size === "lg" ? 20 : 16} />
+          <Loader2 className="animate-spin" size={size === "xs" ? 12 : size === "sm" ? 14 : size === "lg" ? 20 : 16} />
         ) : icon ? (
           <span className="shrink-0">{icon}</span>
         ) : null}
